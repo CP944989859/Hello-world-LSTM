@@ -8,7 +8,6 @@ import datetime
 import os
 from utils import util
 
-
 # class RNN:
 #     def __init__(self,model)
 #     self.model = model
@@ -17,9 +16,6 @@ from utils import util
 #         return
 #
 #     def train(self,):
-
-
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = 'Pytorch network')
@@ -39,11 +35,6 @@ if __name__ == '__main__':
     logger.addHandler(stream_handler)
     logger.info('>>>>>>>>>>>>>>>>>>>>>>>>  Running at %s', datetime.datetime.now())
     util.show_param(FLAGS, logger, stream_handler)
-
-
-
-
-
 
     input_size = 3
     model = LSTM.LSTM(LSTM.LSTMcell, input_size, 10, num_layer_lstm, True, True)
