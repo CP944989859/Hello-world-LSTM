@@ -29,7 +29,7 @@ if __name__ == '__main__':
     FLAGS, unparsed = parser.parse_known_args()
 
     train_dir = FLAGS.train_dir + time.strftime('%Y%m%d_%H%M%S') + '_temp'
-    if os.path.exists(train_dir):
+    if not os.path.exists(train_dir):
         # os.makedirs(train_dir)
         os.mkdir(train_dir)
 
@@ -45,5 +45,5 @@ if __name__ == '__main__':
 
 
 
-
+    input_size = 3
     model = LSTM.LSTM(LSTM.LSTMcell, input_size, 10, num_layer_lstm, True, True)
