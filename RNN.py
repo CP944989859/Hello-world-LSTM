@@ -24,10 +24,9 @@ from utils import util
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = 'Pytorch network')
     parser.add_argument('--model_size', type=int, nargs = '+', default = [2,50])
-    parser.add_argument('--model_size', type=int, nargs = '+', default = [2,50])
-    parser.add_argument('--model_size', type=int, nargs = '+', default = [2,50])
+    parser.add_argument('--hidden_size', type=int, default = 10)
     parser.add_argument('--train_dir', type = str, default = './logs/')
-    FLAGS, unparsed = parser.parser_known_args()
+    FLAGS, unparsed = parser.parse_known_args()
 
     train_dir = FLAGS.train_dir + time.strftime('%Y%m%d_%H%M%S') + '_temp'
     if os.path.exists(train_dir):
