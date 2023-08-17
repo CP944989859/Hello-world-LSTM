@@ -22,8 +22,7 @@ class LSTMcell(torch.nn.Module):
         cy = torch.mul(x, forgetgate) + torch.mul(ingate, cellgate)
         hy = torch.mul(outgate, torch.tanh(cy))
 
-        # return (hy,cy)
-        return hy,cy
+        return (hy,cy)
 
 class LSTM(torch.nn.Module):
     def __init__(self,cell_class, num_layer, input_size, hidden_size, use_bias = False):
