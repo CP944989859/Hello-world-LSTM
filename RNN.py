@@ -41,7 +41,7 @@ if __name__ == '__main__':
     # parser.add_argument('--hidden_size', type=int, default = 10)
     # parser.add_argument('--num_layer', type=int, default = 2)
     parser.add_argument('--epochs', type=int, default = 100)
-    parser.add_argument('--train_dir', type = str, default = './logs/')
+    parser.add_argument('--train_dir', type = str, default = './log/')
     FLAGS, unparsed = parser.parse_known_args()
 
     train_dir = FLAGS.train_dir + time.strftime('%Y%m%d_%H%M%S') + '_temp'
